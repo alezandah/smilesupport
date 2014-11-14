@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  # get 'tickets/new'
-  #
-  # get 'tickets/create'
-  #
-  # get 'tickets/show'
-  #
-  # get 'articles/new'
-  #
-  # get 'articles/create'
+  get 'dashboard/home'
+  get 'dashboard/login'
+  get 'dashboard/tickets'
 
-  root 'welcome#index'
+  get 'dashboard/reports'
+
+  get 'dashboard/settings'
+
+  get 'dashboard/help'
+
+   root 'welcome#index'
+  resources :tickets
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :tickets
+
 
   # Example resource route with options:
   #   resources :products do
