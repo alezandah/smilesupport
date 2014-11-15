@@ -1,19 +1,4 @@
-<h1>Create Your Support Ticket</h1>
 
-<%= form_for @ticket, url: {action: :create}, html: {class: "form-horizontal center"} do |f| %>
-    <div class="form-group">
-      <%= label_tag :title, "Title", class: "col-md-4 control-label" %>
-      <div class="col-md-8">
-      <%= f.text_field :title, class: "form-control" %>
-      </div>
-    </div>
-    <div class="form-group">
-    <%= label_tag :description, "Description", class: "col-md-4 control-label" %>
-    <div class="col-md-8">
-    <%= f.text_area :description, size: "60x12", class: "form-control" %>
-    </div>
-    </div>
-    <div class="text-center">
-      <%= f.submit "Create My Ticket", class: "btn btn-default btn-primary" %>
-    </div>
-<%	 end %>
+<h2 class="text-center" id="thead">Create Your Support Ticket</h2>
+
+<%= render 'form' %>

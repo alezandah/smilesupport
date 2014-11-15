@@ -10,6 +10,13 @@ Rails.application.config.assets.precompile += %w( jquery.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( morris.min.js )
 Rails.application.config.assets.precompile += %w( morris-data.js )
+Rails.application.config.assets.precompile += %w( metisMenu.js )
+Rails.application.config.assets.precompile += %w( sb-admin-2.js )
+Rails.application.config.assets.precompile += %w( metisMenu.min.css )
+Rails.application.config.assets.precompile += %w( sb-admin-2.css )
+Rails.application.config.assets.precompile += %w( bootstrap_and_overrides.css )
+Rails.application.config.assets.precompile += %w( welcome.css )
+Rails.application.config.assets.precompile += %w( mystyle.css )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
