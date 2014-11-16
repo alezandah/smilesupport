@@ -3,6 +3,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'chartkick'
+gem 'googlecharts'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

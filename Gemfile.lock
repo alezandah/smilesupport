@@ -33,6 +33,7 @@ GEM
     commonjs (0.2.7)
     erubis (2.7.0)
     execjs (2.2.2)
+    googlecharts (1.6.8)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.4)
@@ -117,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   chartkick
+  googlecharts
   jbuilder (~> 2.0)
   jquery-rails
   less-rails

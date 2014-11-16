@@ -116,7 +116,12 @@
         <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i>Tickets Inflow</h3>
       </div>
       <div class="panel-body">
-        <div><%= pie_chart Ticket.group(:title).count %></div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h3>Tickets by status</h3>
+          <%= pie_chart({"Assigned" => 10, "Pending" => 5}) %>
+        </div>
+        </div>
       </div>
     </div>
   </div>

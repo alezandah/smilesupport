@@ -11,6 +11,7 @@
 
   <title>SmileSupport Admin</title>
 
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <!-- Bootstrap Core CSS -->
   <%= stylesheet_link_tag "bootstrap.min.css" %>
 
@@ -27,6 +28,7 @@
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
+
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
@@ -155,7 +157,7 @@
     <ul class="nav navbar-nav side-nav">
       <li class="<%= 'active' if current_page?(dashboard_home_path) %>">
         <%= link_to dashboard_home_path do %>
-            Dashboard <i class="g"></i>
+            Dashboard <i class=""></i>
         <% end %>
       </li>
       <li class="<%= 'active' if current_page?(dashboard_tickets_path) %>">
@@ -164,7 +166,7 @@
         <% end %>
       </li>
       <li class="<%= 'active' if current_page?(dashboard_reports_path) %>">
-        <%= link_to dashboard_tickets_path do %>
+        <%= link_to dashboard_reports_path do %>
             Reports <i class=""></i>
         <% end %>
       </li>
@@ -173,7 +175,7 @@
             Settings <i class=""></i>
         <% end %>
       </li>
-      <li class="<%= 'active' if current_page?(dashboard_settings_path) %>">
+      <li class="<%= 'active' if current_page?(dashboard_help_path) %>">
         <%= link_to dashboard_help_path do %>
             Help <i class=""></i>
         <% end %>
@@ -208,6 +210,7 @@
 <%= javascript_include_tag "raphel.min.js" %>
 <%= javascript_include_tag "morris.min.js" %>
 <%= javascript_include_tag "morris-data.js" %>
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 </body>
 
 </html>
