@@ -14,7 +14,6 @@ Rails.application.config.assets.precompile += %w( metisMenu.js )
 Rails.application.config.assets.precompile += %w( sb-admin-2.js )
 Rails.application.config.assets.precompile += %w( metisMenu.min.css )
 Rails.application.config.assets.precompile += %w( sb-admin-2.css )
-Rails.application.config.assets.precompile += %w( bootstrap_and_overrides.css )
 Rails.application.config.assets.precompile += %w( welcome.css )
 Rails.application.config.assets.precompile += %w( mystyle.css )
 

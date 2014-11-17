@@ -14,6 +14,7 @@
             <th>Assignee</th>
             <th>Status</th>
             <th>Priority</th>
+            <th>Action</th>
           </tr>
           </thead>
           <tbody>
@@ -25,9 +26,12 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td><%= link_to 'Edit', edit_ticket_path(ticket.id) %>&nbsp;
+                  <%= link_to 'Delete', ticket_path(ticket.id), method: :delete, data: { confirm: 'Are you sure?' } %>
 
+                </td>
+            <% end %>
               </tr>
-          <% end %>
 
           </tbody>
         </table>
