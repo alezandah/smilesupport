@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :assignees
+
   get 'dashboard/home'
   get 'dashboard/login'
   get 'dashboard/tickets'
