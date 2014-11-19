@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119195221) do
+ActiveRecord::Schema.define(version: 20141119200952) do
 
   create_table "assignees", force: true do |t|
     t.string   "first_name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141119195221) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "priority"
+    t.integer  "assignee_id"
   end
 
 end
