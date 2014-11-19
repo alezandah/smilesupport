@@ -17,3 +17,12 @@
 #thead {
    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.show {
+    background: #eeeeee;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 10px 0 10px 10px;
+}
+.divshow {
+
+}

@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   get 'dashboard/help'
 
+  # get 'dashboard/edit/:id' => 'dashboard#edit', as: :dashboard_edit
+  # get 'dashboard/show/:id' => 'dashboard#edit', as: :dashboard_show
+
+    resources :dashboard
+
+
    root 'welcome#index'
   resources :tickets
 

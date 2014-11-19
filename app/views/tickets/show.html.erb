@@ -1,13 +1,5 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @ticket.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @ticket.description %>
-</p>
+<%= render :partial =>  'show', :layout => "div_show" %>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %>

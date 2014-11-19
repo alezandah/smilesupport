@@ -24,7 +24,7 @@
             <i class="fa fa-comments fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge">26</div>
+            <div class="huge"><%= Ticket.where(status: 'Pending').count %></div>
             <div>Pending Tickets</div>
           </div>
         </div>
@@ -46,7 +46,7 @@
             <i class="fa fa-tasks fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge">12</div>
+            <div class="huge"><%= Ticket.where(status: 'Assigned').count %></div>
             <div>Assigned Tickets</div>
           </div>
         </div>
@@ -90,7 +90,7 @@
             <i class="fa fa-support fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge">13</div>
+            <div class="huge"><%= Ticket.where(priority: 'Critical').count %></div>
             <div>Critical Tickets</div>
           </div>
         </div>
@@ -119,11 +119,12 @@
         <div class="row">
           <div class="col-xs-6">
             <h3>Tickets by status</h3>
-          <%= pie_chart({"Assigned" => 10, "Pending" => 5}) %>
+          <%= pie_chart({"Assigned" => Ticket.where(status: "Assigned").count,
+                         "Pending" => Ticket.where(status: "Pending").count}) %>
          </div>
           <div class="col-xs-6">
             <h3>Tickets by Priority</h3>
-            <%= bar_chart({"Critical" => 10, "Normal" => 5, "Low" => 15} ) %>
+            <%= bar_chart({"Critical" => Ticket.where(priority: "Critical").count, "Normal" => Ticket.where(priority: "Normal").count, "Low" => Ticket.where(priority: "Low").count} ) %>
           </div>
         </div>
       </div>
