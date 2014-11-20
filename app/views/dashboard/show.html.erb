@@ -19,7 +19,7 @@
 
 <div class="show">
   <strong>Assignee:</strong>
-  <%= @ticket.assignee %>
+  <%= Assignee.find(@ticket.assignee_id).full_name %>
 </div>
 <div class="show">
   <strong>Status:</strong>

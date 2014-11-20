@@ -32,7 +32,7 @@
                 <td><%= ticket.id %></td>
                 <td></td>
                 <td><%= ticket.title %></td>
-                <td><%= ticket.assignee %></td>
+                <td><%=Assignee.find(ticket.assignee_id).full_name %></td>
                 <td><%= ticket.status %></td>
                 <td><%= ticket.priority %></td>
                 <td><%= link_to 'Edit', edit_dashboard_path(ticket) %>&nbsp;

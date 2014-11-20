@@ -15,6 +15,7 @@ class DashboardController < ApplicationController
 
   def edit
     @ticket = Ticket.find(params[:id])
+    @assignees = Assignee.all
   end
 
   def show
@@ -46,6 +47,6 @@ class DashboardController < ApplicationController
 
   private
   def ticket_params
-    params.require(:ticket).permit(:title, :description, :assignee, :priority, :status)
+    params.require(:ticket).permit(:title, :description, :assignee, :priority, :status, :assignee_id)
   end
 end

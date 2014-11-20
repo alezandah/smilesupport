@@ -21,9 +21,11 @@
       </div>
     </div>
     <div class="form-group">
-      <%= label_tag :assignee, "Assignee", class: "col-md-4 control-label" %>
+      <%= label_tag :assignee_id, "Assignee", class: "col-md-4 control-label" %>
       <div class="col-md-4">
-        <%= f.text_field :assignee, class: "form-control" %>
+        <%=
+           collection_select(:ticket, :assignee_id, @assignees, :id, :full_name, {include_blank: true},
+                             html_options = {class: "form-control"}) %>
       </div>
      </div>
     <div class="form-group">
