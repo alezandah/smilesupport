@@ -1,6 +1,6 @@
-<h1>Editing assignee</h1>
+<h1 class="assignee-h1">Editing assignee</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @assignee %> |
-<%= link_to 'Back', assignees_path %>
+<%= link_to 'Show', @assignee, class: "btn btn-default" %>
+<%= link_to 'Back', assignees_path, class: "btn btn-default" %>

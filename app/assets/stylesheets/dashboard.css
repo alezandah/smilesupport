@@ -1,0 +1,27 @@
+.wrap {
+ height: 500px;
+}
+
+.navbar-inverse {
+   border-color: #2E2F30;
+}
+
+.panel-resolved {
+    background-color: #31b0d5;
+    color: #ffffff;
+}
+
+.panel-progress {
+    background-color: #8a6d3b;
+    color: #ffffff;
+}
+
+.panel-l2 {
+    background-color: #C7B334;
+    color: #ffffff;
+}
+
+.panel-l3 {
+    background-color: #4DE3D4;
+    color: #ffffff;
+}

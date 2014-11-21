@@ -23,6 +23,38 @@
     border-radius: 4px;
     padding: 10px 0 10px 10px;
 }
-.divshow {
+.right {
+    background: #eeeeee;
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    float: right;
 
+
+}
+.settings-group {
+    width: 450px;
+
+}
+.left {
+background: #ffffff;
+    float: left;
+
+}
+.settings-header {
+    margin-left: 10px;
+    font-family: "Abel", Arial, sans-serif;
+}
+
+p {
+    font-family: "Open Sans",serif;
+    margin-left: 10px;
+}
+
+.btn-small {
+    width: 80px;
+}
+
+.assignee-h1 {
+    text-align: center;
 }

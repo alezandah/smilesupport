@@ -4,6 +4,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'chartkick'
 gem 'googlecharts'
+gem 'kaminari', '~> 0.16.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

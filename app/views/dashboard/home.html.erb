@@ -21,10 +21,12 @@
       <div class="panel-heading">
         <div class="row">
           <div class="col-xs-3">
-            <i class="fa fa-comments fa-5x"></i>
+            <i class="fa fa-clock-o fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(status: 'Pending').count %></div>
+            <div class="huge">
+               <%= Ticket.pending_count %>
+             </div>
             <div>Pending Tickets</div>
           </div>
         </div>
@@ -83,15 +85,15 @@
     </div>
   </div>
   <div class="col-lg-3 col-md-6">
-    <div class="panel panel-red">
+    <div class="panel panel-progress">
       <div class="panel-heading">
         <div class="row">
           <div class="col-xs-3">
-            <i class="fa fa-support fa-5x"></i>
+            <i class="fa fa-ellipsis-h fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(priority: 'Critical').count %></div>
-            <div>Critical Tickets</div>
+            <div class="huge"><%= Ticket.where(status: Ticket::IN_PROGRESS).count %></div>
+            <div> Tickets In-progress</div>
           </div>
         </div>
       </div>
@@ -107,8 +109,97 @@
 </div>
 <!-- /.row -->
 
+<div class="row">
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-resolved">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-thumbs-up fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= Ticket.where(status: Ticket::RESOLVED).count %></div>
+            <div>Resolved Tickets</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-red">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-bolt fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= Ticket.where(priority: Ticket::LEVEL_1).count %></div>
+            <div>Level 1 Tickets</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-l2">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-chevron-up fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= Ticket.where(priority: Ticket::LEVEL_2).count %></div>
+            <div>Level 2 Tickets</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-l3">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-chevron-down fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= Ticket.where(priority: Ticket::LEVEL_3).count %></div>
+            <div>Level 3 Tickets</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+ </div>
 <!-- /.row -->
-
 <div class="row">
   <div class="col-lg-12">
     <div class="panel panel-default">
@@ -119,12 +210,16 @@
         <div class="row">
           <div class="col-xs-6">
             <h3>Tickets by status</h3>
-          <%= pie_chart({"Assigned" => Ticket.where(status: "Assigned").count,
-                         "Pending" => Ticket.where(status: "Pending").count}) %>
+          <%= pie_chart({"Assigned" => Ticket.where(status: Ticket::ASSIGNED ).count,
+                         "Pending" => Ticket.where(status: Ticket::PENDING).count,
+                         "Resolved" => Ticket.where(status: Ticket::RESOLVED).count,
+                         "In-progress" => Ticket.where(status: Ticket::IN_PROGRESS).count}) %>
          </div>
           <div class="col-xs-6">
             <h3>Tickets by Priority</h3>
-            <%= bar_chart({"Critical" => Ticket.where(priority: "Critical").count, "Normal" => Ticket.where(priority: "Normal").count, "Low" => Ticket.where(priority: "Low").count} ) %>
+            <%= bar_chart({"Level 1" => Ticket.where(priority: Ticket::LEVEL_1).count,
+                           "Level 2" => Ticket.where(priority: Ticket::LEVEL_2).count,
+                           "Level 3" => Ticket.where(priority: Ticket::LEVEL_3).count} ) %>
           </div>
         </div>
       </div>

@@ -1,12 +1,16 @@
 class DashboardController < ApplicationController
+
+  helper  ApplicationHelper
+
   layout "dashboard"
 
   def home
-
+  @tickets = Ticket.all
   end
 
   def tickets
   @tickets = Ticket.all
+  @tickets = Ticket.page(params[:page]).per(5)
   end
 
   def reports

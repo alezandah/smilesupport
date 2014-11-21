@@ -1,2 +1,48 @@
-<h1>Dashboard#settings</h1>
-<p>Find me in app/views/dashboard/settings.html.erb</p>
+<!-- Page Heading -->
+<div class="wrap">
+<div class="container" >
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">
+      Ticket <small>Settings</small>
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="settings-group col-lg-4">
+
+      <div class="left col-lg-1">
+
+        <%= image_tag 'users.png' %>
+
+      </div>
+
+      <div class="right">
+
+      <h3 class="settings-header">Edit Assignees</h3>
+        <p>Add new or edit details of existing assigness.</p>
+        <div class="text-center">
+        <%= link_to 'Edit', assignees_path, class: 'btn btn-default btn-small' %>
+        </div>
+
+       </div>
+
+    </div>
+  <div class="settings-group col-lg-4">
+
+    <div class="left col-lg-1">
+
+      <%= image_tag 'verification.png' %>
+
+    </div>
+
+    <div class="right">
+      <h3 class="settings-header">View Settings</h3>
+    </div>
+
+  </div>
+
+
+</div>
+</div>
+</div>

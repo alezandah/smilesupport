@@ -1,6 +1,8 @@
 class AssigneesController < ApplicationController
   before_action :set_assignee, only: [:show, :edit, :update, :destroy]
 
+  layout "dashboard"
+
   # GET /assignees
   # GET /assignees.json
   def index

@@ -1,4 +1,4 @@
-<%= form_for(@assignee) do |f| %>
+<%= form_for @assignee, html: {class: "form-horizontal", role: "form"} do |f| %>
   <% if @assignee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@assignee.errors.count, "error") %> prohibited this assignee from being saved:</h2>
@@ -11,19 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <div class="form-group">
+    <%= label_tag :first_name, "First Name", class: "col-lg-4 control-label" %>
+    <div class="col-lg-4">
+    <%= f.text_field :first_name, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <div class="form-group">
+    <%= f.label :last_name, class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+    <%= f.text_field :last_name, class: "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :job_title %><br>
-    <%= f.text_field :job_title %>
+    <div class="form-group">
+    <%= f.label :job_title, class: "col-md-4 control-label"  %>
+    <div class="col-md-4">
+    <%= f.text_field :job_title,  class: "form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions text-center">
+    <%= f.submit class: "btn btn-default btn-primary" %>
   </div>
 <% end %>
