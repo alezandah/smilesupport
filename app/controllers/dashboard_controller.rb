@@ -13,8 +13,20 @@ class DashboardController < ApplicationController
   @tickets = Ticket.page(params[:page]).per(5)
   end
 
-  def reports
+  def pending
+    @ticket = Ticket.pending
+  end
 
+  def assigned
+    @ticket = Ticket.where(status: Ticket::ASSIGNED)
+  end
+
+  def open
+  @ticket = Ticket.where(status: Ticket::OPEN)
+  end
+
+  def resolved
+    @ticket = Ticket.where(status: Ticket::RESOLVED)
   end
 
   def edit
@@ -24,6 +36,18 @@ class DashboardController < ApplicationController
 
   def show
     @ticket = Ticket.find(params[:id])
+  end
+
+  def level1
+    @ticket = Ticket.where(priority: Ticket::LEVEL_1)
+  end
+
+  def level2
+    @ticket = Ticket.where(priority: Ticket::LEVEL_2)
+  end
+
+  def level3
+    @ticket = Ticket.where(priority: Ticket::LEVEL_3)
   end
 
   def update

@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   get 'dashboard/login'
   get 'dashboard/tickets'
 
-  get 'dashboard/reports'
-
+  get 'dashboard/pending'
+  get 'dashboard/assigned'
+  get 'dashboard/resolved'
+  get 'dashboard/open'
   get 'dashboard/settings'
-
   get 'dashboard/help'
-
+  get 'dashboard/level1'
+  get 'dashboard/level2'
+  get 'dashboard/level3'
   # get 'dashboard/edit/:id' => 'dashboard#edit', as: :dashboard_edit
   # get 'dashboard/show/:id' => 'dashboard#edit', as: :dashboard_show
 
