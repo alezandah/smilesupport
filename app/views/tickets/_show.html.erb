@@ -1,3 +1,4 @@
+<%= bootstrap_flash %>
 <div class="show">
   <strong>Title:</strong>
   <%= @ticket.title %>
@@ -7,3 +8,5 @@
   <strong>Description:</strong>
   <%= @ticket.description %>
 </div>
+<%= link_to "Back", new_ticket_path, class: "btn btn-default" %>
+<%= link_to 'Edit', edit_ticket_path(@ticket), class: "btn btn-default" %>

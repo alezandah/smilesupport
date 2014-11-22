@@ -1,5 +1,6 @@
 class Ticket < ActiveRecord::Base
   validates :title, :description, presence: true
+  # before_validation :assign_serial, :on => :create
 
   belongs_to :assignee
 
@@ -12,6 +13,12 @@ class Ticket < ActiveRecord::Base
   LEVEL_1   = "Level 1"
   LEVEL_2 = "Level 2"
   OPEN = "Open"
+
+  def self.assign_serial
+      ticket = Ticket.last
+      date = ticket.created_at
+    new_date = date.hour.to_s + date.min.to_s + date.sec.to_s
+  end
 
   def self.pending_count
     count_arr = []
