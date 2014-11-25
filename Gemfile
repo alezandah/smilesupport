@@ -5,6 +5,7 @@ gem 'twitter-bootstrap-rails'
 gem 'chartkick'
 gem 'devise'
 gem 'kaminari', '~> 0.16.1'
+gem 'pg'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,4 +46,5 @@ gem 'pry-byebug',    group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'rails_12factor',        group: :production
 
