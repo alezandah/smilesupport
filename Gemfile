@@ -3,7 +3,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'chartkick'
-gem 'googlecharts'
+gem 'devise'
 gem 'kaminari', '~> 0.16.1'
 
 

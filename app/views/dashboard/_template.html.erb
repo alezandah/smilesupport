@@ -5,6 +5,7 @@
     </div>
     <div class="panel-body">
       <div class="table-responsive">
+
         <table class="table table-bordered table-hover table-striped">
           <thead>
           <tr>
@@ -18,7 +19,7 @@
           </tr>
           </thead>
           <tbody>
-          <% @ticket.each do |ticket| %>
+          <% @tickets.each do |ticket| %>
               <tr>
                 <td><%= ticket.ticket_number %>
                 </td>
@@ -35,10 +36,10 @@
 
                 </td>
           <% end %>
-          </tr>
           <%= paginate @tickets %>
-
+          </tr>
           </tbody>
+
         </table>
       </div>
     </div>

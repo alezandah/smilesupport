@@ -8,5 +8,52 @@
     </div>
   </div>
   <!-- /.row -->
- <%= render "template" %>
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Tickets Panel</h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+            <tr>
+              <th>Ticket #</th>
+              <th>Requester</th>
+              <th>Title</th>
+              <th>Assignee</th>
+              <th>Status</th>
+              <th>Priority</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @tickets.pending.each do |ticket| %>
+                <tr>
+                  <td><%= ticket.ticket_number %>
+                  </td>
+                  <td></td>
+                  <td><%= ticket.title %></td>
+                  <td><% if ticket.assignee_id? %>
+                        <%= Assignee.find(ticket.assignee_id).full_name %>
+                    <% end %>
+                  </td>
+                  <td><%= ticket.status %></td>
+                  <td><%= ticket.priority %></td>
+                  <td><%= link_to 'Edit', edit_dashboard_path(ticket) %>&nbsp;
+                    <%= link_to 'Delete', ticket_path(ticket.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+                  </td>
+            <% end %>
+            </tr>
+            <%= paginate @tickets %>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
