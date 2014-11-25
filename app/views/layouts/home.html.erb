@@ -9,7 +9,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Bootstrap Admin Template</title>
+  <title><%= content_for?(:title) ? yield(:title) : "SmileSupportApp" %></title>
+  <%= csrf_meta_tags %>>
 
   <!-- Bootstrap Core CSS -->
   <%= stylesheet_link_tag "bootstrap.min.css" %>

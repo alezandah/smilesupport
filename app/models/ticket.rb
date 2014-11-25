@@ -15,9 +15,11 @@ class Ticket < ActiveRecord::Base
   OPEN = "Open"
 
   def self.assign_serial
+      if Ticket.last != nil
       ticket = Ticket.last
       date = ticket.created_at
     new_date = date.hour.to_s + date.min.to_s + date.sec.to_s
+  end
   end
 
   def self.pending_count

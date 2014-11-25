@@ -17,6 +17,7 @@ class TicketsController < ApplicationController
   # GET /tickets/new
   def new
     @ticket = Ticket.new
+
   end
 
   # GET /tickets/1/edit
@@ -26,6 +27,7 @@ class TicketsController < ApplicationController
   # POST /tickets
   # POST /tickets.json
   def create
+  
     @ticket = Ticket.new(ticket_params)
 
 

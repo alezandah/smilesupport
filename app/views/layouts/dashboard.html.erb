@@ -9,7 +9,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SmileSupport Admin</title>
+  <title><%= content_for?(:title) ? yield(:title) : "SmileSupportApp" %></title>
+  <%= csrf_meta_tags %>
 
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
