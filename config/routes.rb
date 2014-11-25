@@ -24,6 +24,15 @@ Rails.application.routes.draw do
    root 'welcome#index'
   resources :tickets
 
+=begin
+  devise_scope :user do
+    get "/login" => "devise/sessions#new"
+  end
+
+  devise_scope :user do
+    delete "/logout" => "devise/sessions#destroy"
+  end
+=end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
