@@ -40,12 +40,14 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-
+    <p class="notice"><%= notice %></p>
+    <p class="notice"><%= alert %></p>
     <%= render 'shared/nav' %>
 
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
+
           <%= yield %>
         </div>
 
