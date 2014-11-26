@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate
 
   helper  ApplicationHelper
 
@@ -77,5 +77,8 @@ class DashboardController < ApplicationController
   private
   def ticket_params
     params.require(:ticket).permit(:title, :description, :assignee, :priority, :status, :assignee_id)
+  end
+  def authenticate
+    authenticate_user! && current_user.admin?
   end
 end

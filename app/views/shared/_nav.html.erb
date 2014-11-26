@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse  navbar-responsive-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li> <% if user_signed_in? %>
-              <%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-log-out btn btn-default navbar-btn">
+              <%= link_to logout_path, method: :delete do %><span class="glyphicon glyphicon-log-out btn btn-default navbar-btn">
                   Logout</span>
               <% end %>
               <%#= link_to('Logout', destroy_user_session_path, :method => :delete)%>
 
              <% else %>
-              <%= link_to new_user_session_path do %><span class="glyphicon glyphicon-log-in btn btn-default navbar-btn">
+              <%= link_to login_path do %><span class="glyphicon glyphicon-log-in btn btn-default navbar-btn">
               Login</span>
                 <% end %>
               <% end %>
