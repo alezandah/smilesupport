@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125215825) do
+ActiveRecord::Schema.define(version: 20141126161932) do
 
   create_table "assignees", force: true do |t|
     t.string   "first_name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20141125215825) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "web_address"
+    t.string   "company_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
