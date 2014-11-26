@@ -11,25 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126183444) do
-
-  create_table "assignees", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "job_title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "support_tickets", force: true do |t|
-    t.string   "assignee"
-    t.string   "status"
-    t.string   "priority"
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20141126210744) do
 
   create_table "tickets", force: true do |t|
     t.string   "title"
@@ -38,13 +20,13 @@ ActiveRecord::Schema.define(version: 20141126183444) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "priority"
-    t.integer  "assignee_id"
+    t.integer  "user_id"
     t.string   "ticket_number"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "department"
     t.string   "email"
-    t.string   "recipient_company"
+    t.string   "recipient_email"
   end
 
   create_table "users", force: true do |t|

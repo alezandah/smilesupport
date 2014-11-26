@@ -2,7 +2,7 @@ class Ticket < ActiveRecord::Base
   validates :title, :description, presence: true
   # before_validation :assign_serial, :on => :create
 
-  belongs_to :assignee
+  belongs_to :user
 
   STATUS = ["Pending", "Assigned", "Resolved", "Open"]
   PRIORITY = ["Level 1", "Level 2", "Level 3"]
