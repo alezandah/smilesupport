@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # devise_for :users
   resources :assignees
 
   get 'dashboard/home'
@@ -20,8 +20,9 @@ Rails.application.routes.draw do
 
     resources :dashboard
 
+  devise_for :users, :controllers => { registrations: 'registrations'}
 
-   root 'welcome#index'
+  root 'welcome#index'
   resources :tickets
 
   devise_scope :user do
