@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126161932) do
+ActiveRecord::Schema.define(version: 20141126183444) do
 
   create_table "assignees", force: true do |t|
     t.string   "first_name"
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(version: 20141126161932) do
     t.string   "priority"
     t.integer  "assignee_id"
     t.string   "ticket_number"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "department"
+    t.string   "email"
+    t.string   "recipient_company"
   end
 
   create_table "users", force: true do |t|
