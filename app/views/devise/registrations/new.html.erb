@@ -1,10 +1,11 @@
+<%= devise_error_messages! %>
 <div class="container">
   <div class="col-lg-12">
 
 <h2 class="text-center">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-horizontal center"}) do |f| %>
-  <%= devise_error_messages! %>
+
   <div class="form-group">
     <%= f.label :first_name, class: "control-label col-lg-4"%>
     <div class="col-md-4">

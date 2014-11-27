@@ -6,7 +6,6 @@ class DashboardController < ApplicationController
   layout "dashboard"
 
   def home
-  @tickets = Ticket.all
   end
 
   def tickets

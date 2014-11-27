@@ -39,7 +39,7 @@ class TicketsController < ApplicationController
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
       end
     end
-    @ticket = @ticket.update(:ticket_number => Ticket.assign_serial, :user_id => User.find_by(email: @ticket.recipient_email).id)
+    @ticket = @ticket.update(:ticket_number => Ticket.assign_serial, :user_id => User.find_by(email: @ticket.recipient_email).try(:id))
   end
 
   # PATCH/PUT /tickets/1

@@ -1,5 +1,5 @@
 class Ticket < ActiveRecord::Base
-  validates :title, :description, presence: true
+  validates :title, :description, :first_name, :last_name, :email, :recipient_email, presence: true
   # before_validation :assign_serial, :on => :create
 
   belongs_to :user
@@ -15,7 +15,7 @@ class Ticket < ActiveRecord::Base
   OPEN = "Open"
 
   def requester_name
-    name = first_name + " " + last_name
+    name = first_name + last_name
   end
 
   def self.assign_serial
