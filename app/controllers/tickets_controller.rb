@@ -30,7 +30,6 @@ class TicketsController < ApplicationController
   
     @ticket = Ticket.new(ticket_params)
 
-
     respond_to do |format|
       if @ticket.save
         format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
@@ -40,7 +39,7 @@ class TicketsController < ApplicationController
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
       end
     end
-    @ticket = @ticket.update(:ticket_number => Ticket.assign_serial)
+    @ticket = @ticket.update(:ticket_number => Ticket.assign_serial, :user_id => User.find_by(email: @ticket.recipient_email).id)
   end
 
   # PATCH/PUT /tickets/1
@@ -75,6 +74,6 @@ class TicketsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def ticket_params
-    params.require(:ticket).permit(:title, :description, :assignee, :priority, :status, :assignee_id, :ticket_number)
+    params.require(:ticket).permit(:title, :description, :recipient_email, :priority, :status, :user_id, :first_name, :last_name, :email, :department)
   end
 end

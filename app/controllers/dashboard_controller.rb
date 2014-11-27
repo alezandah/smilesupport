@@ -11,48 +11,47 @@ class DashboardController < ApplicationController
 
   def tickets
   # @ticket = Ticket.all
-  @tickets = Ticket.page(params[:page])
+  @tickets = current_user.tickets.page(params[:page])
   end
 
   def pending
-    @tickets = Ticket.page(params[:page])
+    @tickets = current_user.tickets.page(params[:page])
   end
 
   def assigned
-    @tickets = Ticket.where(status: Ticket::ASSIGNED).page(params[:page])
+    @tickets = current_user.tickets.where(status: Ticket::ASSIGNED).page(params[:page])
   end
 
   def open
-  @tickets = Ticket.where(status: Ticket::OPEN).page(params[:page])
+  @tickets = current_user.tickets.where(status: Ticket::OPEN).page(params[:page])
   end
 
   def resolved
-    @tickets = Ticket.where(status: Ticket::RESOLVED).page(params[:page])
+    @tickets = current_user.tickets.where(status: Ticket::RESOLVED).page(params[:page])
   end
 
   def edit
-    @ticket = Ticket.find(params[:id])
-    @assignees = Assignee.all
+    @ticket = current_user.tickets.find(params[:id])
   end
 
   def show
-    @ticket = Ticket.find(params[:id])
+    @ticket = current_user.tickets.find(params[:id])
   end
 
   def level1
-    @tickets = Ticket.where(priority: Ticket::LEVEL_1).page(params[:page])
+    @tickets = current_user.tickets.where(priority: Ticket::LEVEL_1).page(params[:page])
   end
 
   def level2
-    @tickets = Ticket.where(priority: Ticket::LEVEL_2).page(params[:page])
+    @tickets = current_user.tickets.where(priority: Ticket::LEVEL_2).page(params[:page])
   end
 
   def level3
-    @tickets = Ticket.where(priority: Ticket::LEVEL_3).page(params[:page])
+    @tickets = current_user.tickets.where(priority: Ticket::LEVEL_3).page(params[:page])
   end
 
   def update
-    @ticket = Ticket.find(params[:id])
+    @ticket = current_user.tickets.find(params[:id])
     respond_to do |format|
       if @ticket.update(ticket_params)
         format.html { redirect_to dashboard_path, notice: 'Ticket was successfully updated.' }

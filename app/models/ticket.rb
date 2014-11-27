@@ -14,6 +14,10 @@ class Ticket < ActiveRecord::Base
   LEVEL_2 = "Level 2"
   OPEN = "Open"
 
+  def requester_name
+    name = first_name + " " + last_name
+  end
+
   def self.assign_serial
       if Ticket.last != nil
       ticket = Ticket.last

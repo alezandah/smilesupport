@@ -1,12 +1,33 @@
 <%= bootstrap_flash %>
 <div class="show">
-  <strong>Title:</strong>
-  <%= @ticket.title %>
+  <strong>First Name:</strong>
+  <%= @ticket.first_name %>
 </div>
 
 <div class="show">
+  <strong>Last Name:</strong>
+  <%= @ticket.last_name %>
+</div>
+
+<div class="show">
+  <strong>Email:</strong>
+  <%= @ticket.email %>
+</div>
+<div class="show">
+  <strong>Department:</strong>
+  <%= @ticket.department %>
+</div>
+<div class="show">
+  <strong>Title:</strong>
+  <%= @ticket.title %>
+</div>
+<div class="show">
   <strong>Description:</strong>
   <%= @ticket.description %>
+</div>
+<div class="show">
+  <strong>Recipient Email:</strong>
+  <%= @ticket.recipient_email %>
 </div>
 <%= link_to "Back", new_ticket_path, class: "btn btn-default" %>
 <%= link_to 'Edit', edit_ticket_path(@ticket), class: "btn btn-default" %>

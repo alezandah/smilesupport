@@ -17,12 +17,12 @@
   <%= @ticket.description %>
 </div>
 
-<div class="show">
+<!--<div class="show">
   <strong>Assignee:</strong>
-  <% if @ticket.assignee_id? %>
-      <%= Assignee.find(@ticket.assignee_id).full_name %>
-  <% end %>
-</div>
+  <#% if @ticket.assignee_id? %>
+      <%#= Assignee.find(@ticket.assignee_id).full_name %>
+  <#% end %>
+</di-->
 <div class="show">
   <strong>Status:</strong>
   <%= @ticket.status %>

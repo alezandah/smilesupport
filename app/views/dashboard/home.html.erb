@@ -25,7 +25,7 @@
           </div>
           <div class="col-xs-9 text-right">
             <div class="huge">
-               <%= Ticket.pending_count %>
+               <%= current_user.tickets.pending_count %>
              </div>
             <div>Pending Tickets</div>
           </div>
@@ -49,7 +49,7 @@
             <i class="fa fa-tasks fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(status: Ticket::ASSIGNED).count %></div>
+            <div class="huge"><%= current_user.tickets.where(status: Ticket::ASSIGNED).count %></div>
             <div>Assigned Tickets</div>
           </div>
         </div>
@@ -71,7 +71,7 @@
             <i class="fa fa-shopping-cart fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.count %></div>
+            <div class="huge"><%= current_user.tickets.count %></div>
             <div>Total Tickets</div>
           </div>
         </div>
@@ -93,7 +93,7 @@
             <i class="fa fa-ellipsis-h fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(status: Ticket::OPEN).count %></div>
+            <div class="huge"><%= current_user.tickets.where(status: Ticket::OPEN).count %></div>
             <div>Open Tickets</div>
           </div>
         </div>
@@ -119,7 +119,7 @@
             <i class="fa fa-thumbs-up fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(status: Ticket::RESOLVED).count %></div>
+            <div class="huge"><%= current_user.tickets.where(status: Ticket::RESOLVED).count %></div>
             <div>Resolved Tickets</div>
           </div>
         </div>
@@ -141,7 +141,7 @@
             <i class="fa fa-bolt fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(priority: Ticket::LEVEL_1).count %></div>
+            <div class="huge"><%= current_user.tickets.where(priority: Ticket::LEVEL_1).count %></div>
             <div>Level 1 Tickets</div>
           </div>
         </div>
@@ -163,7 +163,7 @@
             <i class="fa fa-chevron-up fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(priority: Ticket::LEVEL_2).count %></div>
+            <div class="huge"><%= current_user.tickets.where(priority: Ticket::LEVEL_2).count %></div>
             <div>Level 2 Tickets</div>
           </div>
         </div>
@@ -185,7 +185,7 @@
             <i class="fa fa-chevron-down fa-5x"></i>
           </div>
           <div class="col-xs-9 text-right">
-            <div class="huge"><%= Ticket.where(priority: Ticket::LEVEL_3).count %></div>
+            <div class="huge"><%= current_user.tickets.where(priority: Ticket::LEVEL_3).count %></div>
             <div>Level 3 Tickets</div>
           </div>
         </div>
@@ -211,16 +211,16 @@
         <div class="row">
           <div class="col-xs-6">
             <h3>Tickets by status</h3>
-          <%= pie_chart({"Assigned" => Ticket.where(status: Ticket::ASSIGNED ).count,
-                         "Pending" => Ticket.where(status: Ticket::PENDING).count,
-                         "Resolved" => Ticket.where(status: Ticket::RESOLVED).count,
-                         "Open" => Ticket.where(status: Ticket::OPEN).count}) %>
+          <%= pie_chart({"Assigned" => current_user.tickets.where(status: Ticket::ASSIGNED ).count,
+                         "Pending" => current_user.tickets.where(status: Ticket::PENDING).count,
+                         "Resolved" => current_user.tickets.where(status: Ticket::RESOLVED).count,
+                         "Open" => current_user.tickets.where(status: Ticket::OPEN).count}) %>
          </div>
           <div class="col-xs-6">
             <h3>Tickets by Priority</h3>
-            <%= bar_chart({"Level 1" => Ticket.where(priority: Ticket::LEVEL_1).count,
-                           "Level 2" => Ticket.where(priority: Ticket::LEVEL_2).count,
-                           "Level 3" => Ticket.where(priority: Ticket::LEVEL_3).count} ) %>
+            <%= bar_chart({"Level 1" => current_user.tickets.where(priority: Ticket::LEVEL_1).count,
+                           "Level 2" => current_user.tickets.where(priority: Ticket::LEVEL_2).count,
+                           "Level 3" => current_user.tickets.where(priority: Ticket::LEVEL_3).count} ) %>
           </div>
         </div>
       </div>

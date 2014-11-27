@@ -20,14 +20,14 @@
         <%= f.text_area :description, class: "form-control", rows: "6", :readonly => true %>
       </div>
     </div>
-    <div class="form-group">
-      <%= label_tag :assignee_id, "Assignee", class: "col-md-4 control-label" %>
+    <!--<div class="form-group">
+      <%#= label_tag :assignee_id, "Assignee", class: "col-md-4 control-label" %>
       <div class="col-md-4">
-        <%=
+        <%#=
            collection_select(:ticket, :assignee_id, @assignees, :id, :full_name, {include_blank: true},
                              html_options = {class: "form-control"}) %>
       </div>
-     </div>
+     </div>-->
     <div class="form-group">
       <%= label_tag :status, "Status", class: "col-md-4 control-label" %>
       <div class="col-md-4">
