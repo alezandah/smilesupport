@@ -14,15 +14,15 @@
 
     <div class="left col-lg-1">
 
-      <%= image_tag 'verification.png' %>
+      <%= image_tag 'users.png' %>
 
     </div>
 
     <div class="right">
-      <h3 class="settings-header">View Settings</h3>
-      <p>Edit the number of tickets you want to view on a page.</p>
+      <h3 class="settings-header">Profile Settings</h3>
+      <p>Edit your registration details.</p>
       <div class="text-center">
-        <a href="#" class="btn btn-default btn-small">Edit</a>
+        <%= link_to "Edit", edit_user_registration_path, class: "btn btn-default btn-small" %>
       </div>
 
     </div>

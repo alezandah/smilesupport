@@ -8,6 +8,11 @@ class DashboardController < ApplicationController
   def home
   end
 
+  def user
+    # render layout: "application"
+  end
+
+
   def tickets
   # @ticket = Ticket.all
   @tickets = current_user.tickets.page(params[:page])
@@ -69,7 +74,7 @@ class DashboardController < ApplicationController
   end
 
   def login
-    render layout:  'login'
+    render layout: 'user'
   end
 
   private

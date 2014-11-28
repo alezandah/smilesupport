@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # devise_for :users
 
   get 'dashboard/home'
-  get 'dashboard/login'
+  get 'dashboard/user'
   get 'dashboard/tickets'
 
   get 'dashboard/pending'
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'dashboard/level1'
   get 'dashboard/level2'
   get 'dashboard/level3'
+
   # get 'dashboard/edit/:id' => 'dashboard#edit', as: :dashboard_edit
   # get 'dashboard/show/:id' => 'dashboard#edit', as: :dashboard_show
 

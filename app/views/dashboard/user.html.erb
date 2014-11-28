@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <h1>Welcome, <%= current_user.first_name %>!</h1>
+  <p class="lead">
+    We hope you enjoy using our application.
+  </p>
+  <div class="row-fluid">
+    <div class="col-md-4">
+      <%= link_to "Edit Registration Details", edit_user_registration_path, :class => "btn btn-info" %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to "Go To Your Dashboard", dashboard_home_path, :class => "btn btn-success" %>
+    </div>
+  </div>
+</div>

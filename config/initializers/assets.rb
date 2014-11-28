@@ -7,6 +7,11 @@ Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( raphael.min.js )
 Rails.application.config.assets.precompile += %w( morris.min.js )
 Rails.application.config.assets.precompile += %w( morris-data.js )
+Rails.application.config.assets.precompile += %w( bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( sb-admin.css )
+Rails.application.config.assets.precompile += %w( mystyle.css )
+Rails.application.config.assets.precompile += %w( dashboard.css )
+Rails.application.config.assets.precompile += %w( morris.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )

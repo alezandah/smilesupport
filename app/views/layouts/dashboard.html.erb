@@ -16,7 +16,16 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
   <!-- Bootstrap Core CSS -->
-  <%= stylesheet_link_tag "application.css" %>
+  <%= stylesheet_link_tag "bootstrap.min.css" %>
+
+  <!-- Custom CSS -->
+  <%= stylesheet_link_tag "sb-admin" %>
+  <%= stylesheet_link_tag "mystyle" %>
+  <%= stylesheet_link_tag "dashboard.css" %>
+
+
+  <!-- Morris Charts CSS -->
+  <%= stylesheet_link_tag "morris" %>
 
   <!-- Custom Fonts -->
   <link href = "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
@@ -34,7 +43,6 @@
 <body>
 
 <div id="wrapper">
-
   <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,20 +53,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <%= link_to 'SmileSupport Admin', root_path, class: 'navbar-brand' %>
+      <%= link_to 'SmileSupport Admin', root_path, class: 'navbar-brand' %>
 
     </div>
 
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
-          <li class="dropdown">
+      <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <%= current_user.username %> <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li>
             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+            <%= link_to edit_user_registration_path do %><span class="fa fa-fw fa-gear">
+                Settings</span>
+            <% end %>
+
           </li>
           <li class="divider"></li>
           <li>
@@ -78,29 +89,29 @@
       <ul class="nav navbar-nav side-nav">
         <li class="<%= is_active?(dashboard_home_path) %>">
           <%= link_to dashboard_home_path do %>
-          Dashboard <i class=""></i>
+              Dashboard <i class=""></i>
           <% end %>
-        <li class="<%= is_active?(dashboard_settings_path) %>">
-          <%= link_to dashboard_settings_path do %>
-              Settings <i class="glyphicon glyphicon-cog"></i>
-          <% end %>
-        </li>
-        <li class="<%= is_active?(dashboard_help_path) %>">
-          <%= link_to dashboard_help_path do %>
-              Help <i class="glyphicon glyphicon-question-sign"></i>
-          <% end %>
-        </li>
+          <li class="<%= is_active?(dashboard_settings_path) %>">
+            <%= link_to dashboard_settings_path do %>
+                Settings <i class="glyphicon glyphicon-cog"></i>
+            <% end %>
+          </li>
+          <li class="<%= is_active?(dashboard_help_path) %>">
+            <%= link_to dashboard_help_path do %>
+                Help <i class="glyphicon glyphicon-question-sign"></i>
+            <% end %>
+          </li>
 
-      </ul>
+          </ul>
     </div>
     <!-- /.navbar-collapse -->
   </nav>
+
 
   <div id="page-wrapper">
 
     <div class="container-fluid">
       <div class="col-lg-12">
-        <%= bootstrap_flash %>
         <%= yield %>
 
       </div>
@@ -114,7 +125,7 @@
 
 </div>
 <!-- /#wrapper -->
-<
+
 <!-- jQuery -->
 <%= javascript_include_tag "jQuery" %>
 
