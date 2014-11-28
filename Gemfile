@@ -6,6 +6,7 @@ gem 'chartkick'
 gem 'devise'
 gem 'kaminari', '~> 0.16.1'
 gem 'pg'
+gem 'bootstrap_form'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -2,16 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
+#welcome-body {
   font-size: 16px;
   font-family: "Open Sans",serif;
   background: transparent;
-} html {
+}
+#welcome-html {
     background: url("9718507502_c825e5ab59_o.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
   }
 
 .margin-base-vertical {
@@ -23,6 +25,10 @@ h1 {
   font-weight: 400;
   font-size: 40px;
 }
-.panel {
+.panel-wel {
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.container-div {
+  margin-top: 100px;
 }
