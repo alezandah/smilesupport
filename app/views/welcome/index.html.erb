@@ -1,3 +1,4 @@
+<!--
 <div class="container container-div">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 panel panel-default panel-wel">
@@ -5,7 +6,7 @@
       <p class="text-center">Track the progress of support requests, drop the lengthy email threads, and meet your
         staff's support needs on time</p>
       <div class="text-center">
-        <p><%= link_to 'Create new support request', new_ticket_path, class: 'btn btn-primary btn-lg' %></p>
+        <p><%#= link_to 'Create new support request', new_ticket_path, class: 'btn btn-primary btn-lg' %></p>
       </div>
 
     </div>
@@ -13,3 +14,15 @@
   </div>
 </div>
 
+-->
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6 img-div">
+      <%= image_tag "smilesupport.jpg", class: "index-img" %>
+      <%= link_to 'Create new support request', new_ticket_path, class: 'btn btn-primary img-link1'%>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary img-link2'%>
+    </div>
+
+  </div>
+</div>

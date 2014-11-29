@@ -26,8 +26,8 @@
                 <td><%= ticket.title %></td>
                 <td><%= ticket.status %></td>
                 <td><%= ticket.priority %></td>
-                <td><%= link_to 'Edit', edit_dashboard_path(ticket) %>&nbsp;
-                  <%= link_to 'Delete', ticket_path(ticket.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+                <td><%= link_to 'Edit', edit_dashboard_path(ticket), class: "btn btn-info" %>&nbsp;
+                  <%= link_to 'Delete', ticket_path(ticket.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
 
                 </td>
           <% end %>
