@@ -112,41 +112,6 @@ padding-bottom:20px;
     padding: 7px 9px;
 }
 
-/* landing page img */
-
-.img-div {
-    margin-top: 100px;
-    position: relative;
-}
-
-.index-img {
-    opacity: 0.8;
-   background: transparent;
-
-}
-
-.img-link1 {
-
-    top: 280px;
-    position: absolute;
-    left: 600px;
-
-    height: 40px;
-    font-size: 18px;
-
-}
-
-.img-link2 {
-
-    top: 280px;
-    position: absolute;
-    left: 260px;
-    height: 40px;
-    font-size: 18px;
-    width: 120px;
-
-}
-
 .navbar-default {
     background-color: #292929;
     border-color: #292929;
@@ -165,9 +130,9 @@ padding-bottom:20px;
     margin: 0;
 }
 
-.main-content {
-    margin-top: 150px;
-}
+
+/* landing page img */
+
 
 .lead-img {
     opacity: 0.8;
@@ -195,3 +160,4 @@ padding-bottom:20px;
     font-size: 17px;
     width: 100px;
 }
+

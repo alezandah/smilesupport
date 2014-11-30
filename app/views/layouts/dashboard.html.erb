@@ -13,22 +13,18 @@
   <%= csrf_meta_tags %>
 
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+  <%= stylesheet_link_tag "application" %>
 
   <!-- Bootstrap Core CSS -->
   <%= stylesheet_link_tag "bootstrap.min.css" %>
 
   <!-- Custom CSS -->
   <%= stylesheet_link_tag "sb-admin" %>
-  <%= stylesheet_link_tag "mystyle" %>
+  
   <%= stylesheet_link_tag "dashboard.css" %>
+  <%= stylesheet_link_tag "mystyle" %>
 
-
-  <!-- Morris Charts CSS -->
-  <%= stylesheet_link_tag "morris" %>
-
-  <!-- Custom Fonts -->
-  <link href = "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +49,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'SmileSupport Admin', root_path, class: 'navbar-brand' %>
+     <%= link_to image_tag("smile.jpg", size: "100x40"), root_path, class: 'navbar-brand' %>
 
     </div>
 
@@ -89,7 +85,7 @@
       <ul class="nav navbar-nav side-nav">
         <li class="<%= is_active?(dashboard_home_path) %>">
           <%= link_to dashboard_home_path do %>
-              Dashboard <i class=""></i>
+              Dashboard <i class="glyphicon glyphicon-home dash-link"></i>
           <% end %>
           <li class="<%= is_active?(dashboard_settings_path) %>">
             <%= link_to dashboard_settings_path do %>
