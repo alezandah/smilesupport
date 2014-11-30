@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails SmileSupport_App: development" uuid="e811d474-7e56-4362-88bc-95a883da40ac">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source source="LOCAL" name="Rails SmileSupport_App: test" uuid="cd5f1238-e1e9-4fe4-b33d-a330dc02f458">
+  <data-source source="LOCAL" name="Rails smilesupport: development" uuid="0bce66ed-fb2e-4d45-9086-91e829c750db">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>

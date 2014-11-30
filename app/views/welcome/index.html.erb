@@ -1,11 +1,11 @@
-<div class="container container-div">
+<!-- <div class="container container-div">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 panel panel-default panel-wel">
       <h1 class="margin-base-vertical">SmileSupport makes it easy to manage support requests from your staff.</h1>
       <p class="text-center">Track the progress of support requests, drop the lengthy email threads, and meet your
         staff's support needs on time</p>
       <div class="text-center">
-        <p><%= link_to 'Create new support request', new_ticket_path, class: 'btn btn-primary btn-lg' %></p>
+        <p><%#= link_to 'Create new support request', new_ticket_path, class: 'btn btn-primary btn-lg' %></p>
       </div>
 
     </div>
@@ -13,3 +13,16 @@
   </div>
 </div>
 
+ -->
+
+
+ <div class="lead-img-div">
+  <%= image_tag "smilesupport.jpg", class: "lead-img" %>
+ </div>
+<div class="lead-buttons">
+  <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary lead-btn1' %>
+
+  <%= link_to 'Create new support request', new_ticket_path, class: 'btn btn-primary lead-btn2' %>
+
+
+</div>

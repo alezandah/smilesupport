@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="515130278">
-    <data-source source="LOCAL" name="Rails SmileSupport_App: development" uuid="e811d474-7e56-4362-88bc-95a883da40ac">
+  <component name="DataSourceManagerImpl" format="xml" hash="600321680">
+    <data-source source="LOCAL" name="Rails smilesupport: development" uuid="0bce66ed-fb2e-4d45-9086-91e829c750db">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
-      <libraries />
-    </data-source>
-    <data-source source="LOCAL" name="Rails SmileSupport_App: test" uuid="cd5f1238-e1e9-4fe4-b33d-a330dc02f458">
-      <driver-ref>postgresql</driver-ref>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:smilesupport_test</jdbc-url>
       <libraries />
     </data-source>
   </component>

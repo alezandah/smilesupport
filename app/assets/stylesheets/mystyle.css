@@ -110,8 +110,6 @@ padding-bottom:20px;
     height: auto;
     margin-bottom: 15px;
     padding: 7px 9px;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 /* landing page img */
@@ -169,8 +167,31 @@ padding-bottom:20px;
 
 .main-content {
     margin-top: 150px;
-=======
->>>>>>> parent of b905d0b... restyled welcome jumbotron
-=======
->>>>>>> parent of b905d0b... restyled welcome jumbotron
+}
+
+.lead-img {
+    opacity: 0.8;
+}
+
+.lead-img-div {
+    margin-top: 130px;
+    position: relative;
+}
+
+.lead-btn2 {
+
+    position: absolute;
+    top: 420px;
+    left: 600px;
+    height: 40px;
+    font-size: 17px;
+}
+
+.lead-btn1 {
+    position: absolute;
+    top: 420px;
+    left: 300px;
+    height: 40px;
+    font-size: 17px;
+    width: 100px;
 }
