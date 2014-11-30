@@ -174,14 +174,14 @@ padding-bottom:20px;
 }
 
 .lead-img-div {
-    margin-top: 130px;
+    margin-top: 110px;
     position: relative;
 }
 
 .lead-btn2 {
 
     position: absolute;
-    top: 420px;
+    top: 400px;
     left: 600px;
     height: 40px;
     font-size: 17px;
@@ -189,8 +189,8 @@ padding-bottom:20px;
 
 .lead-btn1 {
     position: absolute;
-    top: 420px;
-    left: 300px;
+    top: 400px;
+    left: 250px;
     height: 40px;
     font-size: 17px;
     width: 100px;
