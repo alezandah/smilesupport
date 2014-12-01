@@ -15,7 +15,7 @@ class Ticket < ActiveRecord::Base
   OPEN = "Open"
 
   def requester_name
-    name = first_name + last_name
+    [first_name, last_name].join(" ")
   end
 
   def self.assign_serial
