@@ -42,6 +42,13 @@
 <div class="show-form-sm">
   <%= @ticket.recipient_email %>
 </div>
+<div class="text-center">
+  <strong>Ticket Number</strong>
+</div>
+<div class="show-form-sm">
+  <%= @ticket.ticket_number %>
+</div>
+<p>PLease keep this ticket number for future reference.</p>
 <%= link_to "Back", new_ticket_path, class: "btn btn-default" %>
 <%= link_to 'Edit', edit_ticket_path(@ticket), class: "btn btn-default" %>
 </div>
