@@ -1,33 +1,47 @@
 <%= bootstrap_flash %>
-<div class="show">
-  <strong>First Name:</strong>
+<div class="show-form-div">
+<div class="text-center">
+  <strong>First Name</strong>
+</div>
+<div class="show-form-sm">
   <%= @ticket.first_name %>
 </div>
 
-<div class="show">
-  <strong>Last Name:</strong>
+<div class="text-center">
+  <strong>Last Name</strong>
+</div>
+<div class="show-form-sm">
   <%= @ticket.last_name %>
 </div>
 
-<div class="show">
-  <strong>Email:</strong>
+<div class="text-center">
+  <strong>Email</strong>
+</div>
+<div class="show-form-sm">
   <%= @ticket.email %>
 </div>
-<div class="show">
-  <strong>Department:</strong>
+<div class="text-center">
+  <strong>Department</strong>
+</div>
+<div class="show-form-sm">
   <%= @ticket.department %>
 </div>
-<div class="show">
-  <strong>Title:</strong>
+<div class="text-center">
+  <strong>Title</strong>
+</div>
+<div class="show-form-sm">
   <%= @ticket.title %>
 </div>
-<div class="show">
-  <strong>Description:</strong>
+  <div class="text-center"><strong>Description</strong></div>
+  <div class="show-form-sm">
   <%= @ticket.description %>
-</div>
-<div class="show">
+  </div>
+<div class="text-center">
   <strong>Recipient Email:</strong>
+</div>
+<div class="show-form-sm">
   <%= @ticket.recipient_email %>
 </div>
 <%= link_to "Back", new_ticket_path, class: "btn btn-default" %>
 <%= link_to 'Edit', edit_ticket_path(@ticket), class: "btn btn-default" %>
+</div>

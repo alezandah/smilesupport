@@ -58,7 +58,7 @@ class DashboardController < ApplicationController
     @ticket = current_user.tickets.find(params[:id])
     respond_to do |format|
       if @ticket.update(ticket_params)
-        format.html { redirect_to dashboard_path, notice: 'Ticket was successfully updated.' }
+        format.html { redirect_to dashboard_home_path, notice: 'Ticket was successfully updated.' }
         format.json { render :show, status: :ok, location: @ticket }
       else
         format.html { render :edit }
